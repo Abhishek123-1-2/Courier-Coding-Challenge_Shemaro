@@ -1,6 +1,6 @@
 'use strict';
 
-// Add a new offer here and it just works everywhere else.
+// Add a new offer here if you want to do that and it just works everywhere else.
 const OFFER_REGISTRY = {
   OFR001: { discount: 10, distMin: 0, distMax: 200, distMaxExclusive: true, weightMin: 70, weightMax: 200 },
   OFR002: { discount: 7, distMin: 50, distMax: 150, weightMin: 100, weightMax: 250 },

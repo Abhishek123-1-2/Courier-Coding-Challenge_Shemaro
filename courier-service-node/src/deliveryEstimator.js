@@ -1,16 +1,9 @@
 'use strict';
 
-// Time is floored to 2 decimals at each leg (not rounded) - that's what
-// lines up with the sample output (100/70 -> 1.42, not 1.43).
 function oneWayTime(distance, speed) {
   return Math.floor((distance / speed) * 100) / 100;
 }
 
-// Picks the best shipment for one vehicle out of the packages still
-// waiting: most packages first, then heaviest total, then soonest to
-// finish. Brute-forces subsets with a weight prune - plenty fast for the
-// batch sizes this challenge deals with. For much bigger fleets this is
-// the spot to swap in a proper knapsack DP.
 function findBestShipment(packages, maxWeight) {
   const candidates = packages
     .map((pkg, idx) => ({ pkg, idx }))
@@ -53,7 +46,7 @@ function scheduleDeliveries(packages, { count, maxSpeed, maxWeight }) {
   const deliverable = [];
   for (const pkg of packages) {
     if (pkg.weight > maxWeight) {
-      deliveryTimes.set(pkg.id, null); // can't ever fit on any vehicle
+      deliveryTimes.set(pkg.id, null); 
     } else {
       deliverable.push(pkg);
     }
