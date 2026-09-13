@@ -1,0 +1,18 @@
+{
+  "name": "courier-service",
+  "version": "1.0.0",
+  "description": "CLI for courier delivery-cost estimation (with offers) and delivery-time estimation (vehicle scheduling).",
+  "main": "bin/main.js",
+  "bin": {
+    "courier-service": "bin/main.js"
+  },
+  "scripts": {
+    "start": "node bin/main.js",
+    "test": "node test/run-tests.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "ISC",
+  "private": true
+}
